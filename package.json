@@ -1,0 +1,57 @@
+{
+  "name": "node-workshop",
+  "version": "0.1.0",
+  "description": "workshop app",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon | pino-pretty -t",
+    "build": "npm run build:next && npm run build:server",
+    "build:server": "tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production node ./dist/index.js",
+    "test": "npm run lint && npm run typescript && npm run jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typescript": "tsc -b",
+    "jest": "NODE_ENV=test jest",
+    "jest:watch": "NODE_ENV=test jest --watch",
+    "jest:update": "NODE_ENV=test jest -u",
+    "updtr": "updtr --save-exact"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/**/*.*"
+    ],
+    "exec": "ts-node --project tsconfig.server.json src/index.ts"
+  },
+  "dependencies": {
+    "fastify": "2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "11.13.0",
+    "@types/pg": "7.4.14",
+    "@typescript-eslint/eslint-plugin": "1.6.0",
+    "@typescript-eslint/parser": "1.6.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.7.1",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-config-standard-jsx": "6.0.2",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "eslint-plugin-standard": "4.0.0",
+    "jest": "24.7.1",
+    "nodemon": "1.18.10",
+    "pino-pretty": "2.6.0",
+    "prettier": "1.16.4",
+    "ts-node": "8.0.3",
+    "typescript": "3.4.2",
+    "updtr": "3.1.0"
+  }
+}

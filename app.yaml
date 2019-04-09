@@ -1,0 +1,23 @@
+runtime: custom
+env: flex
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+skip_files:
+  - ^(node_modules/.*)
+  - ^(\.vscode/.*)
+  - ^(\.next/.*)
+  - ^(.dist/.*)
+  - ^(dist/.*)
+  - ^(docs/.*)
+  - ^(scripts/.*)
+env_variables:
+  SQL_USER: rsvg
+  SQL_PASSWORD: rsvg
+  SQL_DATABASE: rsvg
+  INSTANCE_CONNECTION_NAME: rsvg-235817:europe-west3:db
+beta_settings:
+  cloud_sql_instances: rsvg-235817:europe-west3:db
