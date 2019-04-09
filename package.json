@@ -11,9 +11,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typescript": "tsc -b",
-    "jest": "NODE_ENV=test jest",
-    "jest:watch": "NODE_ENV=test jest --watch",
-    "jest:update": "NODE_ENV=test jest -u",
     "updtr": "updtr --save-exact"
   },
   "engines": {
@@ -34,7 +31,6 @@
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
     "babel-eslint": "10.0.1",
-    "babel-jest": "24.7.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-config-standard": "12.0.0",
@@ -46,12 +42,23 @@
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "1.6.0",
     "eslint-plugin-standard": "4.0.0",
-    "jest": "24.7.1",
     "nodemon": "1.18.10",
     "pino-pretty": "2.6.0",
     "prettier": "1.16.4",
     "ts-node": "8.0.3",
     "typescript": "3.4.2",
     "updtr": "3.1.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stockulus/node-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stockulus/node-workshop/issues"
+  },
+  "homepage": "https://github.com/stockulus/node-workshop#readme"
 }
