@@ -7,8 +7,8 @@
     "build": "npm run build:next && npm run build:server",
     "build:server": "tsc --project tsconfig.server.json",
     "start": "NODE_ENV=production node ./dist/index.js",
-    "test": "npm run lint && npm run typescript && npm run jest",
-    "lint": "eslint .",
+    "test": "npm run lint && npm run typescript",
+    "lint": "eslint src/*",
     "lint:fix": "eslint . --fix",
     "typescript": "tsc -b",
     "updtr": "updtr --save-exact"
@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "@types/node": "11.13.0",
-    "@types/pg": "7.4.14",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
     "babel-eslint": "10.0.1",
@@ -39,6 +38,7 @@
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-react": "7.12.4",
     "eslint-plugin-standard": "4.0.0",
     "nodemon": "1.18.10",
     "pino-pretty": "2.6.0",
