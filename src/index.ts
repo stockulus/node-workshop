@@ -21,7 +21,11 @@ server.post('/pop', {}, (_, reply) => {
   reply.send({ x })
 })
 
-server.post(
+type PushBody = {
+  x: number
+}
+
+server.post<unknown, unknown, unknown, PushBody>(
   '/push',
   {
     schema: {
