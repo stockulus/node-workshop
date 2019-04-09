@@ -4,8 +4,7 @@
   "description": "workshop app",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon | pino-pretty -t",
-    "build": "npm run build:server",
-    "build:server": "tsc --project tsconfig.server.json",
+    "build": "tsc --project tsconfig.server.json",
     "start": "cross-env NODE_ENV=production node ./dist/index.js",
     "test": "cross-env npm run lint && npm run typescript",
     "lint": "eslint src/*",
@@ -14,7 +13,7 @@
     "updtr": "updtr --save-exact"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=8.0.0"
   },
   "nodemonConfig": {
     "watch": [
