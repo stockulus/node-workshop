@@ -28,7 +28,7 @@
     "exec": "ts-node --project tsconfig.server.json src/index.ts"
   },
   "dependencies": {
-    "fastify": "2.2.0"
+    "fastify": "2.15.1"
   },
   "devDependencies": {
     "@types/node": "11.13.2",
